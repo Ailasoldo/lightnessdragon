@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Micin</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+<link href="styles.css" rel="stylesheet">
+</head>
+<body>
+  <div class="viewport">
+    <div class="wrapper">
+
+      <!-- HERO -->
+      <div class="section">
+        <img src="assets/1.png" alt="Hero">
+        <header class="hero">
+          <div class="container">
+            <h1 class="title">LIGHTNESS</h1>
+            <p class="tagline">THE SKIES ARE OPEN. THE TRUMPET SOUND HEARD. THE EMPIRE WAITS IN THE LIGHT.</p>
+          </div>
+          <div class="hero-bar">
+            <nav class="socials" aria-label="Social">
+              <a href="#"><i class="bx bxl-twitter"></i></a>
+              <a href="#"><i class="bx bxl-telegram"></i></a>
+              <a href="#"><i class="bx bxl-instagram"></i></a>
+              <a href="#"><i class="bx bxl-facebook"></i></a>
+            </nav>
+            <div class="badge">
+              <span class="label">$LIGHT</span>
+              <span class="code">V46D2Q4HFDVDFVDHFB6H541C3S2544A</span>
+            </div>
+          </div>
+        </header>
+      </div>
+
+      <!-- ABOUT -->
+      <div class="section">
+        <img src="assets/2.png" alt="About">
+        <div class="content" style="justify-content:center;align-items:center;">
+          <div class="card" style="max-width:520px;text-align:left;position:absolute;right:40px;">
+            <span class="chip">ABOUT</span>
+            <h2>ABOUT LIGHTNESS</h2>
+            <p>The empire is built for daylight. Lightness is where the surface glow brightens, feels warmth, and the laughs heard. It's a calm and peaceful safe haven like an endless fairy tale happily ever after — not a creepy living sprawl of shadow, neon, and noise.</p>
+            <p>Every house in these kingdoms carries a story; some are soothed by early-morning dew, some by beautiful music that never stops, and some by people who are positively and full of hope which lead to the happily ever after stories.</p>
+            <p>Lightness is here to sell your dream; it's here to show that light can be fun-lovely and alive. No sad, no false hope — this enchantment grows magically as long as you stay.</p>
+            <ul class="about-list">
+              <li>Step inside</li>
+              <li>Bring your dream</li>
+              <li>Watch the magics shift around you</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- GUIDE -->
+      <div class="section">
+        <img src="assets/3.png" alt="Guide">
+        <section class="guide">
+          <span class="chip">GUIDE</span>
+          <h2 class="guide-title">HOW TO GET $LIGHT</h2>
+          <div class="steps">
+            <div class="step"><h3>1) STAY IN THE LIGHT</h3><p>Grab a Solana wallet (backpack, Phantom, Solflare). This keeps your supplies for life full of joy at light.</p></div>
+            <div class="step"><h3>2) CARRY SOME SOL</h3><p>Load a little SOL into your wallet. It powers the steps ahead and keeps your hopes up.</p></div>
+            <div class="step"><h3>3) SWAP ON A DEX</h3><p>Head to a Solana DEX like Jupiter or Raydium. Paste the official Lightness contract, trade your SOL, and let the light shift.</p></div>
+            <div class="step"><h3>4) HOLD THE SHINE</h3><p>Add $LIGHT to your wallet, keep an eye on it, and know you're now part of the story.</p></div>
+          </div>
+          <div class="big-card">
+            <p>&nbsp;</p>
+            <div class="guide-mascot"><img src="assets/naga.png" alt="Dragon Mascot"></div>
+          </div>
+        </section>
+      </div>
+
+      <!-- COMMUNITY -->
+      <div class="section">
+        <img src="assets/4.png" alt="Community">
+        <section class="community">
+          <span class="chip">COMMUNITY</span>
+          <h2 class="community-title">ECHOES IN THE LIGHT</h2>
+          <p class="community-text">
+            THE EMPIRE DOESN'T STAY QUIET. EVERY JOY, EVERY SMILE, EVERY SOUND BOUNCES OFF THE KINGDOMS AND KEEPS THE COMMUNITY ALIVE. THAT'S WHAT MAKES LIGHTNESS MORE THAN CASTLES AND SUNLIGHT – IT'S THE VOICE THAT FILLS IT.<br><br>
+            STEP IN, MEET THE OTHERS, SHARE YOUR STORY. SOME COME TO JOKE, SOME COME TO BUILD, SOME JUST FOLLOW THE LIGHT. HOWEVER YOU ENTER, THE LIGHT ALWAYS OPEN THE GATE FOR EVERYONE.
+          </p>
+          <div class="community-buttons">
+            <a href="#" class="btn primary">ENTER THE GATE</a>
+            <a href="#" class="btn secondary">SEE CHART</a>
+          </div>
+        </section>
+      </div>
+
+      <!-- FOOTER -->
+      <div class="footer">
+        <p>© 2025 LIGHTNESS. All rights reserved.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    function scaleDesktop() {
+      const wrapper = document.querySelector('.wrapper');
+      const designWidth = 1280;
+      const scale = window.innerWidth / designWidth;
+      wrapper.style.transform = "scale(" + scale + ")";
+      const totalHeight = wrapper.scrollHeight * scale;
+      document.querySelector('.viewport').style.height = window.innerHeight + "px";
+      wrapper.style.height = wrapper.scrollHeight + "px";
+      wrapper.style.width = designWidth + "px";
+      document.body.style.height = totalHeight + "px";
+    }
+    window.addEventListener('load', scaleDesktop);
+    window.addEventListener('resize', scaleDesktop);
+  </script>
+</body>
+</html>
