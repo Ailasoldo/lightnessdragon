@@ -11,17 +11,24 @@
 html, body {
   margin: 0;
   padding: 0;
-  font-family: Inter, system-ui, sans-serif;
-  color: var(--ink);
+  min-height: 100%;
+  height: auto;              /* jangan pakai fixed 100% */
   background: #fff;
-  -webkit-font-smoothing:antialiased;
-  -moz-osx-font-smoothing:grayscale;
-  /* allow vertical scroll, hide horizontal overflow */
-  overflow-x: hidden;
-  overflow-y: auto;
-  /* safe area for iOS notch / webviews */
-  padding-bottom: env(safe-area-inset-bottom);
+  overflow-x: hidden;        /* cegah scroll samping */
+  overflow-y: auto;          /* biar scroll normal */
 }
+
+.wrapper {
+  min-height: 100vh;         /* full layar */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+footer {
+  margin-top: auto;          /* biar footer nempel bawah konten */
+}
+
 
 /* viewport helper: use this container to control scrolling reliably */
 .viewport {
@@ -31,14 +38,6 @@ html, body {
   overflow-y: auto;
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
-}
-
-/* wrapper: responsive, no fixed px width on small screens */
-.wrapper {
-  max-width: var(--maxw);
-  width: 100%;
-  margin: 0 auto;
-  transform-origin: top left;
 }
 
 /* section: avoid fixed heights on mobile */
@@ -86,9 +85,6 @@ html, body {
 .card h2{font-family:"Cinzel",serif;color:var(--gold);margin-bottom:10px}
 .card p{margin:.65rem 0;font-size:14px;line-height:1.7;color:var(--gold);text-transform:none}
 
-/* footer */
-.footer{background:var(--gold);color:#fff;text-align:center;padding:16px;font-size:14px;width:100%}
-
 /* small screen tweaks */
 @media (max-width: 1199px) {
   .section { min-height: auto; padding-bottom: 30px; } /* let content flow */
@@ -105,3 +101,4 @@ html, body {
   .wrapper { width: 1280px; }
   .section { width: 1280px; min-height: 720px; }
 }
+
