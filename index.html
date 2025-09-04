@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lightness</title>
+  <title>Lightness Revamp Responsive</title>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
-<link href="styles.css" rel="stylesheet">
+ <link rel="stylesheet" href="style.min.css">
 </head>
 <body>
   <div class="viewport">
@@ -97,24 +97,6 @@
 
     </div>
   </div>
-
-  <script>
-    function scaleDesktop() {
-      const wrapper = document.querySelector('.wrapper');
-      const designWidth = 1280;
-      const scale = window.innerWidth / designWidth;
-      wrapper.style.transform = "scale(" + scale + ")";
-      const totalHeight = wrapper.scrollHeight * scale;
-      document.querySelector('.viewport').style.height = window.innerHeight + "px";
-      wrapper.style.height = wrapper.scrollHeight + "px";
-      wrapper.style.width = designWidth + "px";
-      document.body.style.height = totalHeight + "px";
-    }
-    window.addEventListener('load', scaleDesktop);
-    window.addEventListener('resize', scaleDesktop);
-  </script>
+<script src="script.js"> </script>
 </body>
-
 </html>
-
-
